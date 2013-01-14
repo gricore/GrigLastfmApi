@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace GrigCoreLastfm.XAML.Model
+namespace GrigCoreLastfm.XML.Model
 {
     public class GXmlInner
     {

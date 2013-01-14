@@ -1,11 +1,10 @@
-﻿using System.Reflection;
-using GrigCoreLastfm.XAML.Model;
-using System;
+﻿using System;
 using System.Xml;
 using System.Threading.Tasks;
 using System.Linq;
+using GrigCoreLastfm.XML.Model;
 
-namespace GrigCoreLastfm.XAML
+namespace GrigCoreLastfm.XML
 {
     public class XmlParser
     {

@@ -64,11 +64,11 @@
     <Compile Include="Request\RequestParameters.cs" />
     <Compile Include="UIComponent\LogInWindow.cs" />
     <Compile Include="Utilities\RefTools.cs" />
-    <Compile Include="XAML\Model\GXmlAttrubute.cs" />
-    <Compile Include="XAML\Model\GXmlAttrubutes.cs" />
-    <Compile Include="XAML\Model\GXmlInner.cs" />
-    <Compile Include="XAML\Model\GXmlInners.cs" />
-    <Compile Include="XAML\XmlParser.cs" />
+    <Compile Include="XML\Model\GXmlAttrubute.cs" />
+    <Compile Include="XML\Model\GXmlAttrubutes.cs" />
+    <Compile Include="XML\Model\GXmlInner.cs" />
+    <Compile Include="XML\Model\GXmlInners.cs" />
+    <Compile Include="XML\XmlParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

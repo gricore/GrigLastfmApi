@@ -1,5 +1,4 @@
-﻿using System.Collections;
-namespace GrigCoreLastfm.XAML.Model
+﻿namespace GrigCoreLastfm.XML.Model
 {
     public class GXmlAttrubute
     {

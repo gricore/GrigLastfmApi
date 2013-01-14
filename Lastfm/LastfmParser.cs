@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using GrigCoreLastfm.API.Types;
-using GrigCoreLastfm.XAML.Model;
 using System;
 using System.Linq;
 using GrigCoreLastfm.Utilities;
+using GrigCoreLastfm.XML.Model;
 
 namespace GrigCoreLastfm.Lastfm
 {

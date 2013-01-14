@@ -1,7 +1,7 @@
 ﻿using GrigCoreLastfm.Lastfm;
 using GrigCoreLastfm.Request;
-using GrigCoreLastfm.XAML;
 using GrigCoreLastfm.Utilities;
+using GrigCoreLastfm.XML;
 
 namespace GrigCoreLastfm.API.Types
 {

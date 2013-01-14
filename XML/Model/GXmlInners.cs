@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GrigCoreLastfm.XAML.Model
+namespace GrigCoreLastfm.XML.Model
 {
     public class GXmlInners : List<GXmlInner>, ICloneable
     {
