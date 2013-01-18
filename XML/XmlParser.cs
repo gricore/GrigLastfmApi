@@ -73,7 +73,11 @@ namespace GrigCoreLastfm.XML
 
         }
 
-
+        /// <summary>
+        /// Prepare
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
         private GXmlInner PrepareWithChildInner(XmlNode node)
         {
             #region Non Parallel

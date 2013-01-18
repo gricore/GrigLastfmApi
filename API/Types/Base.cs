@@ -52,7 +52,7 @@ namespace GrigCoreLastfm.API.Types
             var parser = new XmlParser(request.RequestURL);
             var inner = parser.ConvertToInners();
             var lastfmParser = new LastfmParser();
-            lastfmParser.SetObjectPropertiesValues(ref lastfmObject, inner, Session);
+            lastfmObject = lastfmParser.SetObjectPropertiesValues(lastfmObject, inner, Session);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace GrigCoreLastfm.API.Types
             var parser = new XmlParser(request.RequestURL);
             var inner = parser.ConvertToInners().GetInnerByKey(type);
             var lastfmParser = new LastfmParser();
-            lastfmParser.SetObjectPropertiesValues(ref lastfmObject, inner, Session);
+            lastfmObject = lastfmParser.SetObjectPropertiesValues(lastfmObject, inner, Session);
         }
 
         #endregion

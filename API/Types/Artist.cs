@@ -136,8 +136,27 @@ namespace GrigCoreLastfm.API.Types
             get { return _bandmembers; }
             set { _bandmembers = value; }
         }
-       
-        
+
+        private List<Track> _tracks = new List<Track>();
+        /// <summary>
+        /// Gets or sets top tracks
+        /// </summary>
+        public List<Track> Tracks
+        {
+            get { return _tracks; }
+            set { _tracks = value; }
+        }
+
+        private List<Event> _events = new List<Event>();
+        /// <summary>
+        /// Gets or sets artist events
+        /// </summary>
+        public List<Event> Events
+        {
+            get { return _events; }
+            set { _events = value; }
+        }
+
 
         #endregion
 
@@ -186,7 +205,7 @@ namespace GrigCoreLastfm.API.Types
         /// </summary>
         /// <returns></returns>
         public List<Tag> GetTopTags()
-        {          
+        {
             var parameters = new RequestParameters
                 {
                     new RequestParameter {Key = "artist", Value = Name},
@@ -201,6 +220,50 @@ namespace GrigCoreLastfm.API.Types
             if (finalArtist != null) Tags = finalArtist.Tags;
 
             return Tags;
+        }
+
+        /// <summary>
+        /// Get top tarcks
+        /// </summary>
+        /// <returns></returns>
+        public List<Track> GetTopTracks()
+        {
+            var parameters = new RequestParameters
+                {
+                    new RequestParameter {Key = "artist", Value = Name},
+                    new RequestParameter {Key = "api_key", Value = Session.ApiKey},
+                    new RequestParameter {Key = "api_sec", Value = Session.ApiSec}
+                };
+
+            object obj = new Artist { Session = Session };
+            AutomaticGetObject("artist.getTopTracks", parameters, ref obj);
+
+            var finalArtist = obj as Artist;
+            if (finalArtist != null) Tracks = finalArtist.Tracks;
+
+            return Tracks;
+        }
+
+        /// <summary>
+        /// Gets artist events
+        /// </summary>
+        /// <returns></returns>
+        public List<Event> GetEvents()
+        {
+            var parameters = new RequestParameters
+                {
+                    new RequestParameter {Key = "artist", Value = Name},
+                    new RequestParameter {Key = "api_key", Value = Session.ApiKey},
+                    new RequestParameter {Key = "api_sec", Value = Session.ApiSec}
+                };
+
+            object obj = new Artist { Session = Session };
+            AutomaticGetObject("artist.getEvents", parameters, ref obj);
+
+            var finalArtist = obj as Artist;
+            if (finalArtist != null) Events = finalArtist.Events;
+
+            return Events;
         }
 
         #endregion
